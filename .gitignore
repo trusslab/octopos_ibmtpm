@@ -1,0 +1,4 @@
+src/*.o
+src/NVChip
+src/tpm_server
+src/DebugFile.txt
