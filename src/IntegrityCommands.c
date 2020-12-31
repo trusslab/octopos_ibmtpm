@@ -148,6 +148,10 @@ TPM2_PCR_Read(
 	      PCR_Read_Out    *out            // OUT: output parameter list
 	      )
 {
+    // Input Validation
+    // Check if the read operation is allowed by the current command locality
+    if(!PCRIsReadAllowed(in->pcrHandle))
+	return TPM_RC_LOCALITY;
     // Command Output
     // Call PCR read function.  input pcrSelectionIn parameter could be changed
     // to reflect the actual PCR being returned

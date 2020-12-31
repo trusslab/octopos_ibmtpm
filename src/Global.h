@@ -1204,10 +1204,18 @@ typedef struct
 {
     unsigned int    stateSave : 1;              // if the PCR value should be
     // saved in state save
-    unsigned int    resetLocality : 5;          // The locality that the PCR
+    unsigned int    resetLocality : 8;          // The locality that the PCR
     // can be reset
-    unsigned int    extendLocality : 5;         // The locality that the PCR
+    unsigned int    extendLocality : 8;         // The locality that the PCR
     // can be extend
+    unsigned int    readLocality : 8;           // The locality that the PCR
+    // can be read
+    unsigned int    extResetLocality;           // The extended locality that the PCR
+    // can be reset
+    unsigned int    extExtendLocality;          // The extended locality that the PCR
+    // can be extend
+    unsigned int    extReadLocality;            // The extended locality that the PCR
+    // can be read
 } PCR_Attributes;
 EXTERN PCR          s_pcrs[IMPLEMENTATION_PCR];
 #endif // PCR_C
