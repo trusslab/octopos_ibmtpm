@@ -146,7 +146,7 @@
 #define IMPLEMENTATION_PCR              34
 #endif
 #ifndef PLATFORM_PCR
-#define PLATFORM_PCR                    24
+#define PLATFORM_PCR                    34
 #endif
 #ifndef DRTM_PCR
 #define DRTM_PCR                        17

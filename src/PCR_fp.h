@@ -153,8 +153,8 @@ PCRComputeCurrentDigest(
 			);
 BOOL
 PCRIsReadAllowed(
-		   TPMI_DH_PCR      handle         // IN: PCR handle to be extended
-		   );
+	TPML_PCR_SELECTION      *selection         // IN: PCR handle to be read
+	);
 void
 PCRRead(
 	TPML_PCR_SELECTION  *selection,     // IN/OUT: PCR selection (filtered on

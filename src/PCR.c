@@ -809,21 +809,34 @@ PCRComputeCurrentDigest(
 /* FALSE read is not allowed */
 BOOL
 PCRIsReadAllowed(
-		   TPMI_DH_PCR      handle         // IN: PCR handle to be extended
-		   )
+	TPML_PCR_SELECTION      *selection         // IN: PCR selection to be read
+	)
 {
+	TPMS_PCR_SELECTION      *select;
     UINT8               commandLocality;
 	UINT32              extLocalityBits = 1;
-    UINT32              pcr = handle - PCR_FIRST;
+	UINT32              pcr;
+    UINT32              i;
     // Check for the locality
     commandLocality = _plat__LocalityGet();
-	if((commandLocality & 0x80) != 0)
+	extLocalityBits = extLocalityBits << (commandLocality & 0x7F);
+	for(i = 0; i < selection->count; i++)
 	{
-		extLocalityBits = extLocalityBits << (commandLocality & 0x7F);
-		if((extLocalityBits & s_initAttributes[pcr].extReadLocality) == 0)
-		return FALSE;
-		else
-		return TRUE;
+	    // Point to the current selection
+	    select = &selection->pcrSelections[i]; // Point to the current selection
+	    FilterPcr(select);      // Clear out the bits for unimplemented PCR
+	    // Iterate through the selection
+	    for(pcr = 0; pcr < IMPLEMENTATION_PCR; pcr++)
+		{
+		    if(IsPcrSelected(pcr, select))         // Is this PCR selected
+			{
+				if((commandLocality & 0x80) != 0
+				 && (extLocalityBits & s_initAttributes[pcr].extReadLocality) == 0)
+				{
+					return FALSE;
+				}
+			}
+		}
 	}
 
 	return TRUE;
