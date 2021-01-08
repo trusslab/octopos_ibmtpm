@@ -143,10 +143,10 @@
 #define MATH_LIB                        Ossl
 #endif
 #ifndef IMPLEMENTATION_PCR
-#define IMPLEMENTATION_PCR              34
+#define IMPLEMENTATION_PCR              40
 #endif
 #ifndef PLATFORM_PCR
-#define PLATFORM_PCR                    34
+#define PLATFORM_PCR                    40
 #endif
 #ifndef DRTM_PCR
 #define DRTM_PCR                        17

@@ -104,7 +104,13 @@ static const PCR_Attributes s_initAttributes[] =
 	{0, 0x86, 0x86, 0x86, 0x200, 0x040, 0x041}, // PCR 31, Locality 0x86, RUNTIME1 PCR
 	{0, 0x87, 0x87, 0x87, 0x200, 0x080, 0x081}, // PCR 32, Locality 0x87, RUNTIME2 PCR
 	{0, 0x88, 0x88, 0x88, 0x200, 0x100, 0x101}, // PCR 33, Locality 0x88, UNTRUSTED PCR
-	{0, 0x89, 0x89, 0x89, 0x200, 0x200, 0x201}  // PCR 34, Locality 0x89, PMU PCR
+	{0, 0x89, 0x89, 0x89, 0x200, 0x200, 0x201}, // PCR 34, Locality 0x89, PMU PCR
+	{0, 0, 0, 0, 0, 0, 0},                      // PCR 35, placeholder
+	{0, 0, 0, 0, 0, 0, 0},                      // PCR 36, placeholder
+	{0, 0, 0, 0, 0, 0, 0},                      // PCR 37, placeholder
+	{0, 0, 0, 0, 0, 0, 0},                      // PCR 38, placeholder
+	{0, 0, 0, 0, 0, 0, 0},                      // PCR 39, placeholder
+	{0, 0, 0, 0, 0, 0, 0}                       // PCR 40, END
     };
 /* 8.7.2 Functions */
 /* 8.7.2.1 PCRBelongsAuthGroup() */
