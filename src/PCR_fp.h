@@ -151,6 +151,10 @@ PCRComputeCurrentDigest(
 			//     output)
 			TPM2B_DIGEST        *digest         // OUT: digest
 			);
+BOOL
+PCRIsReadAllowed(
+	TPML_PCR_SELECTION      *selection         // IN: PCR handle to be read
+	);
 void
 PCRRead(
 	TPML_PCR_SELECTION  *selection,     // IN/OUT: PCR selection (filtered on
