@@ -166,6 +166,8 @@ TPM2_Quote(
 	return TPM_RCS_KEY + RC_Quote_signHandle;
     if(!CryptSelectSignScheme(signObject, &in->inScheme))
 	return TPM_RCS_SCHEME + RC_Quote_inScheme;
+    if(!PCRIsQuoteAllowed(&(in->PCRselect)))
+	return TPM_RC_LOCALITY;
     // Command Output
     // Filling in attest information
     // Common fields
