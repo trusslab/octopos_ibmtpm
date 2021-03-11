@@ -77,40 +77,40 @@
 static const PCR_Attributes s_initAttributes[] =
     {
 	// PCR 0 - 15, static RTM
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0}, 
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0},
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0},
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0}, 
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0},
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0},
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0},
-	{1, 0, 0x1F, 0x1F, 0, 0, 0}, {1, 0, 0x1F, 0x1F, 0, 0, 0},
-	{0, 0x0F, 0x1F, 0x1F, 0, 0, 0},             // PCR 16, Debug
-	{0, 0x10, 0x1C, 0x1F, 0, 0, 0},             // PCR 17, Locality 4
-	{0, 0x10, 0x1C, 0x1F, 0, 0, 0},             // PCR 18, Locality 3
-	{0, 0x10, 0x0C, 0x1F, 0, 0, 0},             // PCR 19, Locality 2
-	{0, 0x14, 0x0E, 0x1F, 0, 0, 0},             // PCR 20, Locality 1
-	{0, 0x14, 0x04, 0x1F, 0, 0, 0},             // PCR 21, Dynamic OS
-	{0, 0x14, 0x04, 0x1F, 0, 0, 0},             // PCR 22, Dynamic OS
-	{0, 0x0F, 0x1F, 0x1F, 0, 0, 0},             // PCR 23, Application specific
-	{0, 0x0F, 0x1F, 0x1F, 0, 0, 0},             // PCR 24, testing policy
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, 
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0},
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0},
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, 
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0},
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0},
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0},
+	{1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0}, {1, 0, 0x1F, 0x1F, 0, 0, 0, 0x0C0},
+	{0, 0x0F, 0x1F, 0x1F, 0, 0, 0, 0x0C0},              // PCR 16, Debug
+	{0, 0x10, 0x1C, 0x1F, 0, 0, 0, 0x0C0},              // PCR 17, Locality 4
+	{0, 0x10, 0x1C, 0x1F, 0, 0, 0, 0x0C0},              // PCR 18, Locality 3
+	{0, 0x10, 0x0C, 0x1F, 0, 0, 0, 0x0C0},              // PCR 19, Locality 2
+	{0, 0x14, 0x0E, 0x1F, 0, 0, 0, 0x0C0},              // PCR 20, Locality 1
+	{0, 0x14, 0x04, 0x1F, 0, 0, 0, 0x0C0},              // PCR 21, Dynamic OS
+	{0, 0x14, 0x04, 0x1F, 0, 0, 0, 0x0C0},              // PCR 22, Dynamic OS
+	{0, 0x0F, 0x1F, 0x1F, 0, 0, 0, 0x0C0},              // PCR 23, Application specific
+	{0, 0x0F, 0x1F, 0x1F, 0, 0, 0, 0x0C0},              // PCR 24, testing policy
 	// Extended PCR Slot
-	{0, 0x80, 0x80, 0x80, 0x200, 0x001, 0x001}, // PCR 25, Locality 0x80, OS PCR
-	{0, 0x81, 0x81, 0x81, 0x200, 0x002, 0x003}, // PCR 26, Locality 0x81, KEYBOARD PCR
-	{0, 0x82, 0x82, 0x82, 0x200, 0x004, 0x005}, // PCR 27, Locality 0x82, SERIAL_OUT PCR
-	{0, 0x83, 0x83, 0x83, 0x200, 0x008, 0x009}, // PCR 28, Locality 0x83, STORAGE PCR
-	{0, 0x84, 0x84, 0x84, 0x200, 0x010, 0x011}, // PCR 29, Locality 0x84, NETWORK PCR
-	{0, 0x85, 0x85, 0x85, 0x200, 0x020, 0x021}, // PCR 30, Locality 0x85, BLUETOOTH PCR
-	{0, 0x86, 0x86, 0x86, 0x200, 0x040, 0x041}, // PCR 31, Locality 0x86, RUNTIME1 PCR
-	{0, 0x87, 0x87, 0x87, 0x200, 0x080, 0x081}, // PCR 32, Locality 0x87, RUNTIME2 PCR
-	{0, 0x88, 0x88, 0x88, 0x200, 0x100, 0x101}, // PCR 33, Locality 0x88, UNTRUSTED PCR
-	{0, 0x89, 0x89, 0x89, 0x200, 0x200, 0x201}, // PCR 34, Locality 0x89, PMU PCR
-	{0, 0, 0, 0, 0, 0, 0},                      // PCR 35, placeholder
-	{0, 0, 0, 0, 0, 0, 0},                      // PCR 36, placeholder
-	{0, 0, 0, 0, 0, 0, 0},                      // PCR 37, placeholder
-	{0, 0, 0, 0, 0, 0, 0},                      // PCR 38, placeholder
-	{0, 0, 0, 0, 0, 0, 0},                      // PCR 39, placeholder
-	{0, 0, 0, 0, 0, 0, 0}                       // PCR 40, END
+	{0, 0x80, 0x80, 0x80, 0x200, 0x001, 0x001, 0x0C0},  // PCR 25, Locality 0x80, OS PCR
+	{0, 0x81, 0x81, 0x81, 0x200, 0x002, 0x0C2, 0x0C0},  // PCR 26, Locality 0x81, KEYBOARD PCR
+	{0, 0x82, 0x82, 0x82, 0x200, 0x004, 0x0C4, 0x0C0},  // PCR 27, Locality 0x82, SERIAL_OUT PCR
+	{0, 0x83, 0x83, 0x83, 0x200, 0x008, 0x0C8, 0x0C0},  // PCR 28, Locality 0x83, STORAGE PCR
+	{0, 0x84, 0x84, 0x84, 0x200, 0x010, 0x0D0, 0x0C0},  // PCR 29, Locality 0x84, NETWORK PCR
+	{0, 0x85, 0x85, 0x85, 0x200, 0x020, 0x0E0, 0x0C0},  // PCR 30, Locality 0x85, BLUETOOTH PCR
+	{0, 0x86, 0x86, 0x86, 0x200, 0x040, 0x17E, 0x040},  // PCR 31, Locality 0x86, RUNTIME1 PCR
+	{0, 0x87, 0x87, 0x87, 0x200, 0x080, 0x1BE, 0x080},  // PCR 32, Locality 0x87, RUNTIME2 PCR
+	{0, 0x88, 0x88, 0x88, 0x200, 0x100, 0x1C0, 0x0C0},  // PCR 33, Locality 0x88, UNTRUSTED PCR
+	{0, 0x89, 0x89, 0x89, 0x200, 0x200, 0x200, 0x0C0},  // PCR 34, Locality 0x89, PMU PCR
+	{0, 0, 0, 0, 0, 0, 0, 0},                           // PCR 35, placeholder
+	{0, 0, 0, 0, 0, 0, 0, 0},                           // PCR 36, placeholder
+	{0, 0, 0, 0, 0, 0, 0, 0},                           // PCR 37, placeholder
+	{0, 0, 0, 0, 0, 0, 0, 0},                           // PCR 38, placeholder
+	{0, 0, 0, 0, 0, 0, 0, 0},                           // PCR 39, placeholder
+	{0, 0, 0, 0, 0, 0, 0, 0}                            // PCR 40, END
     };
 /* 8.7.2 Functions */
 /* 8.7.2.1 PCRBelongsAuthGroup() */
@@ -714,7 +714,7 @@ PCRIsExtendAllowed(
 {
     UINT8               commandLocality;
     UINT8               localityBits = 1;
-	UINT32              extLocalityBits = 1;
+    UINT32              extLocalityBits = 1;
     UINT32              pcr = handle - PCR_FIRST;
     // Check for the locality
     commandLocality = _plat__LocalityGet();
@@ -819,12 +819,12 @@ PCRIsReadAllowed(
 	)
 {
 	TPMS_PCR_SELECTION      *select;
-    UINT8               commandLocality;
+	UINT8               commandLocality;
 	UINT32              extLocalityBits = 1;
 	UINT32              pcr;
-    UINT32              i;
-    // Check for the locality
-    commandLocality = _plat__LocalityGet();
+	UINT32              i;
+	// Check for the locality
+	commandLocality = _plat__LocalityGet();
 	extLocalityBits = extLocalityBits << (commandLocality & 0x7F);
 	for(i = 0; i < selection->count; i++)
 	{
@@ -1296,4 +1296,48 @@ PCRCapGetHandles(
 		}
 	}
     return more;
+}
+/* This function indicates if a PCR may be quoted by the current command locality. The return value
+   is based on PCR attributes, and not the PCR allocation. */
+/* Return Values Meaning */
+/* TRUE TPM2_Quote() is allowed */
+/* FALSE TPM2_Quote() is not allowed */
+BOOL
+PCRIsQuoteAllowed(
+		  TPML_PCR_SELECTION      *selection         // IN: PCR handle to be quoted
+		  )
+{
+	TPMS_PCR_SELECTION      *select;
+	UINT8               commandLocality;
+	UINT32              extLocalityBits = 1;
+	UINT32              pcr;
+	UINT32              i;
+	// Check for the locality
+	commandLocality = _plat__LocalityGet();
+	#include <stdio.h>
+	printf("Loc: %x\n", commandLocality);
+	fflush(stdout);
+	extLocalityBits = extLocalityBits << (commandLocality & 0x7F);
+	for(i = 0; i < selection->count; i++)
+	{
+	    // Point to the current selection
+	    select = &selection->pcrSelections[i]; // Point to the current selection
+	    FilterPcr(select);      // Clear out the bits for unimplemented PCR
+	    // Iterate through the selection
+	    for(pcr = 0; pcr < IMPLEMENTATION_PCR; pcr++)
+		{
+		    if(IsPcrSelected(pcr, select))         // Is this PCR selected
+			{
+				printf("PCR: %u\n", pcr);
+				fflush(stdout);
+				if((commandLocality & 0x80) != 0
+				 && (extLocalityBits & s_initAttributes[pcr].extAttestLocality) == 0)
+				{
+					return FALSE;
+				}
+			}
+		}
+	}
+
+	return TRUE;
 }

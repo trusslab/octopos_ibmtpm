@@ -1216,6 +1216,8 @@ typedef struct
     // can be extend
     unsigned int    extReadLocality;            // The extended locality that the PCR
     // can be read
+    unsigned int    extAttestLocality;          // The extended locality that the PCR
+    // can be attested
 } PCR_Attributes;
 EXTERN PCR          s_pcrs[IMPLEMENTATION_PCR];
 #endif // PCR_C

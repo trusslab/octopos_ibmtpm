@@ -197,5 +197,8 @@ PCRCapGetHandles(
 		 TPML_HANDLE     *handleList     // OUT: list of handle
 		 );
 
-
+BOOL
+PCRIsQuoteAllowed(
+		  TPML_PCR_SELECTION      *selection         // IN: PCR handle to be quoted
+		 );
 #endif
