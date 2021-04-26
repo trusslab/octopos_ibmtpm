@@ -37,13 +37,10 @@
 #										#
 #################################################################################
 
-
-CC = /usr/bin/gcc
-
-CCFLAGS = -Wall  			\
+CCFLAGS = -fno-strict-aliasing  	\
 	-Wmissing-declarations -Wmissing-prototypes -Wnested-externs \
 	-Werror -Wsign-compare \
-	 -c -ggdb -O0 			\
+	-c -ggdb -O2 			\
 	-DTPM_POSIX			\
 	-D_POSIX_			\
 	-DTPM_NUVOTON
