@@ -640,17 +640,17 @@ PCRIsResetAllowed(
 	{
 		localityBits = localityBits << commandLocality;
 		if((localityBits & s_initAttributes[pcr].resetLocality) == 0)
-		return FALSE;
+			return FALSE;
 		else
-		return TRUE;
+			return TRUE;
 	}
 	else
 	{
 		extLocalityBits = extLocalityBits << (commandLocality & 0x7F);
 		if((extLocalityBits & s_initAttributes[pcr].extResetLocality) == 0)
-		return FALSE;
+			return FALSE;
 		else
-		return TRUE;
+			return TRUE;
 	}
 }
 /* 8.7.2.19 PCRChanged() */
@@ -693,17 +693,17 @@ PCRIsExtendAllowed(
 	{
 		localityBits = localityBits << commandLocality;
 		if((localityBits & s_initAttributes[pcr].extendLocality) == 0)
-		return FALSE;
+			return FALSE;
 		else
-		return TRUE;
+			return TRUE;
 	}
 	else
 	{
 		extLocalityBits = extLocalityBits << (commandLocality & 0x7F);
 		if((extLocalityBits & s_initAttributes[pcr].extExtendLocality) == 0)
-		return FALSE;
+			return FALSE;
 		else
-		return TRUE;
+			return TRUE;
 	}
 }
 /* 8.7.2.21 PCRExtend() */

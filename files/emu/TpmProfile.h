@@ -186,7 +186,11 @@
 #endif
 #ifndef MAX_CONTEXT_SIZE
 /* #define MAX_CONTEXT_SIZE             1344    */
-#define MAX_CONTEXT_SIZE                2680	/* kgold RSA-3072 */
+#	if defined(__MICROBLAZE__)
+#		define MAX_CONTEXT_SIZE	2624
+#	else
+#		define MAX_CONTEXT_SIZE	2680	/* kgold RSA-3072 */
+#	endif
 #endif
 #ifndef MAX_DIGEST_BUFFER
 #define MAX_DIGEST_BUFFER               1024

@@ -76,7 +76,7 @@
 #   elif defined(__i386__) || defined(__i386) || defined(i386)		\
     || defined(_WIN32) || defined(_M_IX86)				\
     || defined(_M_ARM) || defined(__arm__) || defined(__thumb__)	\
-    || defined(__powerpc__) || defined(__PPC__)
+    || defined(__powerpc__) || defined(__PPC__) || defined(__MICROBLAZE__)
 #       define RADIX_BITS                      32
 #   else
 #       error Unable to determine RADIX_BITS from compiler environment
