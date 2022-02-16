@@ -1,4 +1,3 @@
-src/*.o
-src/NVChip
-src/tpm_server
-src/DebugFile.txt
+tpm_server
+files/emu/*.o
+files/emu/DebugFile.txt
